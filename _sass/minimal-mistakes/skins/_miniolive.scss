@@ -3,17 +3,32 @@
    ========================================================================== */
 
 /* Colors */
-$background-color: #521477 !default;
+$grey-color:          #828282 !default;
+$grey-color-light:    lighten($grey-color, 40%) !default;
+$grey-color-dark:     darken($grey-color, 25%) !default;
+
+$brand-color-light:   lighten($brand-color, 25%) !default;
+$brand-color-dark:    darken($brand-color, 15%) !default;
+$brand-color-lighter: lighten($brand-color, 55%) !default;
+$brand-color-darker:  darken($brand-color, 35%) !default;
+
+$background-color: $grey-color-light !default;
+
 $text-color: #fffd86 !default;
-$primary-color: #c327ab !default;
+
+$primary-color: #9E9D24 !default;
 $border-color: mix(#fff, $background-color, 20%) !default;
+
 $code-background-color: mix(#000, $background-color, 15%) !default;
 $code-background-color-dark: mix(#000, $background-color, 20%) !default;
 $form-background-color: mix(#000, $background-color, 15%) !default;
-$footer-background-color: mix(#000, $background-color, 25%) !default;
+
+$footer-background-color: #fdfdfd //mix(#000, $background-color, 25%) !default;
+
 $link-color: $primary-color !default;
 $link-color-hover: mix(#fff, $link-color, 25%) !default;
 $link-color-visited: mix(#000, $link-color, 25%) !default;
+
 $masthead-link-color: $text-color !default;
 $masthead-link-color-hover: mix(#000, $text-color, 20%) !default;
 $navicon-link-color-hover: mix(#000, $background-color, 30%) !default;
