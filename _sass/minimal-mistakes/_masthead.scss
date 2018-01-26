@@ -3,8 +3,18 @@
    ========================================================================== */
 
 .masthead {
-  position: relative;
+
+  min-height: 45px; //$spacing-unit * 1.865;
+  margin: 0;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  background: $header-color;
+  box-shadow: 0px 4px 7px rgba(0,0,0,.28);
+  
+  position: fixed;
   border-bottom: 1px solid $border-color;
+    
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;
@@ -15,7 +25,8 @@
     @include clearfix;
     margin-left: auto;
     margin-right: auto;
-    padding: 1em;
+    padding-right: 1em;
+    padding-left: 1em;
     max-width: 100%;
     display: -webkit-box;
     display: flex;
