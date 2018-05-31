@@ -56,6 +56,8 @@ figure.highlight {
   width: 100%;
 }
 
+
+
 .highlight .hll {
   background-color: $base06;
 }
@@ -316,3 +318,12 @@ figure.highlight {
     color: $base09;
   }
 }
+
+/* Disable line number (lineno) / shell session prompt (gp) selection */
+.highlight .lineno {-webkit-user-select: none;-moz-user-select: none; -o-user-select: none;} 
+.lineno::-moz-selection {background-color: transparent;} /* Mozilla specific */
+.lineno::selection {background-color: transparent;} /* Other major browsers */
+
+.highlight .gp {-webkit-user-select: none;-moz-user-select: none; -o-user-select: none;} 
+.gp::-moz-selection {background-color: transparent;} /* Mozilla specific */
+.gp::selection {background-color: transparent;} /* Other major browsers */
