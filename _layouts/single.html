@@ -8,6 +8,13 @@ layout: default
       {% include page__hero_video.html %}
     {% endif %} -->
 
+{% if  page.header.teaser contains "://" %}
+  {% capture img_path %}{{ page.header.teaser }}{% endcapture %}
+{% else %}
+  {% capture img_path %}{{ page.header.teaser | absolute_url }}{% endcapture %}
+{% endif %}
+
+
 {% if page.url != "/" and site.breadcrumbs %}
   {% unless paginator %}
     {% include breadcrumbs.html %}
@@ -46,7 +53,7 @@ layout: default
         {% endif %}
         
         {% if page.header.teaser %}
-          <img src="{{ page.header.teaser }}">
+          <img src="{{ img_path }}">
         {% endif %}
         
         {{ content }}
