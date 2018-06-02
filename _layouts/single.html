@@ -8,10 +8,10 @@ layout: default
       {% include page__hero_video.html %}
     {% endif %} -->
 
-{% if  page.header.teaser contains "://" %}
-  {% capture img_path %}{{ page.header.teaser }}{% endcapture %}
+{% if  page.header.image contains "://" %}
+  {% capture img_path %}{{ page.header.image }}{% endcapture %}
 {% else %}
-  {% capture img_path %}{{ page.header.teaser | absolute_url }}{% endcapture %}
+  {% capture img_path %}{{ page.header.image | absolute_url }}{% endcapture %}
 {% endif %}
 
 
@@ -52,7 +52,7 @@ layout: default
           </aside>
         {% endif %}
         
-        {% if page.header.teaser %}
+        {% if page.header.image %}
           <img src="{{ img_path }}">
         {% endif %}
         <br>
