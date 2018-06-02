@@ -2,6 +2,12 @@
 layout: default
 ---
 
+  <!--   {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+      {% include page__hero.html %}
+    {% elsif page.header.video.id and page.header.video.provider %}
+      {% include page__hero_video.html %}
+    {% endif %} -->
+
 {% if page.url != "/" and site.breadcrumbs %}
   {% unless paginator %}
     {% include breadcrumbs.html %}
@@ -13,12 +19,7 @@ layout: default
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     
-    {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-      {% include page__hero.html %}
-    {% elsif page.header.video.id and page.header.video.provider %}
-      {% include page__hero_video.html %}
-    {% endif %}
-    
+
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
@@ -43,7 +44,13 @@ layout: default
             </nav>
           </aside>
         {% endif %}
+        
+        {% if page.header.teaser %}
+          <img src="{{ page.header.teaser }}">
+        {% endif %}
+        
         {{ content }}
+
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
