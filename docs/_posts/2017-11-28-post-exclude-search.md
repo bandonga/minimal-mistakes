@@ -10,3 +10,9 @@ This post should not appear in the search index because it has the following YAM
 ```yaml
 search: false
 ```
+
+:information_source: **Learn more**  with this note!
+{: .notice}
+
+
+> :information_source: **Learn more** with this note!
