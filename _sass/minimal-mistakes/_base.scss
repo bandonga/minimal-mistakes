@@ -158,14 +158,6 @@ blockquote {
       margin-bottom: 0; /* override*/
     }
   }
-  cite {
-    font-style: italic;
-
-    &:before {
-      content: "\2014";
-      padding-right: 5px;
-    }
-  }
 }
 
 /* links */
