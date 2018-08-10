@@ -14,8 +14,8 @@ layout: default
   {% capture img_path %}{{ page.header.image | absolute_url }}{% endcapture %}
 {% endif %}
 
-{% if page.toc.h_max %}
-  {% assign hmax = page.toc.h_max %}
+{% if page.toc_hmax %}
+  {% assign hmax = page.toc_hmax %}
 {% else %}
   {% assign hmax = 3 %}
 {% endif %}
