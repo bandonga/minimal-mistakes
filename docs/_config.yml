@@ -5,7 +5,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-remote_theme             : "marolive/minimal-mistakes"
+remote_theme             : "mmistakes/minimal-mistakes"
 
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
@@ -15,9 +15,9 @@ title                    : "Minimal Mistakes"
 title_separator          : "-"
 name                     : &name "Michael Rose" # &name is a YAML anchor which can be *referenced later
 description              : &description "A flexible Jekyll theme for your blog or site with a minimalist aesthetic."
-url                      : https://maro.live # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://mmistakes.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/minimal-mistakes" # the subpath of your site, e.g. "/blog"
-repository               : "marolive/minimal-mistakes"
+repository               : "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -54,9 +54,6 @@ reCaptcha:
 
 atom_feed:
   path                   : # blank (default) uses feed.xml
-
-search                   : true # true, false (default)
-search_full_content      : true # true, false (default)
 
 # SEO Related
 google_site_verification : "UQj93ERU9zgECodaaXgVpkjrFn9UrDMEzVamacSoQ8Y" # Replace this with your ID, or delete
@@ -96,7 +93,6 @@ author:
   location         : "Buffalo, NY"
   email            :
   uri              : "https://mademistakes.com"
-  home             : "https://mademistakes.com"
   bitbucket        :
   codepen          :
   dribbble         :
@@ -191,7 +187,8 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
-
+  u:
+    output: true
 
 # Defaults
 defaults:
@@ -251,6 +248,15 @@ defaults:
       layout: single
       author_profile: false
       share: true
+  - scope:
+      path: ''
+      type: u
+    values:
+      layout: archive
+      read_time: false
+      comments: false
+      share: false
+      related: false
 
 
 # Sass/SCSS
@@ -273,6 +279,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-remote-theme
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -281,6 +288,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-remote-theme
 
 
 # Archives
