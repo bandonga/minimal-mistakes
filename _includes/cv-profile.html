@@ -48,7 +48,7 @@
       {% if author.uri %}
         <li>
           <a href="{{ author.uri }}" itemprop="url">
-            <i class="fas fa-fw fa-link" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].website_label | default: "author.uri" }}
+            <i class="fas fa-fw fa-link" aria-hidden="true"></i> {{ author.uri }}
           </a>
         </li>
       {% endif %}
@@ -57,15 +57,15 @@
         <li>
           <a href="mailto:{{ author.email }}">
             <meta itemprop="email" content="{{ author.email }}" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].email_label | default: "author.email" }}
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> {{ author.email }}
           </a>
         </li>
       {% endif %}
 
       {% if author.telegram %}
         <li>
-          <a href="https://gitlab.com/{{ author.gitlab }}" itemprop="sameAs">
-            <i class="fab fa-fw fa-gitlab" aria-hidden="true"></i> marcelofpfelix
+          <a href="https://t.me/{{ author.telegram }}" itemprop="sameAs">
+            <i class="fab fa-fw fa-telegram" aria-hidden="true"></i>{{ author.telegram }}
           </a>
         </li>
       {% endif %}
@@ -73,7 +73,15 @@
       {% if author.linkedin %}
         <li>
           <a href="https://www.linkedin.com/in/{{ author.linkedin }}" itemprop="sameAs">
-            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> author.linkedin
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i>{{ author.linkedin }}
+          </a>
+        </li>
+      {% endif %}
+
+      {% if author.github %}
+        <li>
+          <a href="https://github.com/{{ author.github }}" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i>{{ author.github }}
           </a>
         </li>
       {% endif %}
