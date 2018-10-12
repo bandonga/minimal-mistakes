@@ -39,33 +39,16 @@
     {% endif %}
   </div>
 
-  {% if author.location %}
-    <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
-      <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">{{ author.location }}</span>
-    </li>
-  {% endif %}
-
-  {% if author.nationality %}
-    <li>
-      <i class="fas fa-fw fa-globe-africa" aria-hidden="true"></i> <span itemprop="name">{{ author.nationality }}</span>
-    </li>
-  {% endif %}
-
-  {% if author.born %}
-    <li>
-      <i class="fas fa-fw fa-birthday-cake" aria-hidden="true"></i> <span itemprop="name">{{ author.born }}</span>
-    </li>
-  {% endif %}
-
   <div class="author__urls-wrapper">
     <button class="btn btn--inverse">{{ site.data.ui-text[site.locale].follow_label | remove: ":" | default: "Follow" }}</button>
     <ul class="author__urls social-icons">
 
+  <!-- Profile -->
 
       {% if author.uri %}
         <li>
           <a href="{{ author.uri }}" itemprop="url">
-            <i class="fas fa-fw fa-link" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].website_label | default: "Website" }}
+            <i class="fas fa-fw fa-link" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].website_label | default: "author.uri" }}
           </a>
         </li>
       {% endif %}
@@ -74,23 +57,15 @@
         <li>
           <a href="mailto:{{ author.email }}">
             <meta itemprop="email" content="{{ author.email }}" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].email_label | default: "Email" }}
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].email_label | default: "author.email" }}
           </a>
         </li>
       {% endif %}
 
-      {% if author.keybase %}
+      {% if author.telegram %}
         <li>
-          <a href="https://keybase.io/{{ author.keybase }}" itemprop="sameAs">
-            <i class="fas fa-fw fa-key" aria-hidden="true"></i> Keybase
-          </a>
-        </li>
-      {% endif %}
-
-      {% if author.twitter %}
-        <li>
-          <a href="https://twitter.com/{{ author.twitter }}" itemprop="sameAs">
-            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
+          <a href="https://gitlab.com/{{ author.gitlab }}" itemprop="sameAs">
+            <i class="fab fa-fw fa-gitlab" aria-hidden="true"></i> marcelofpfelix
           </a>
         </li>
       {% endif %}
@@ -98,44 +73,38 @@
       {% if author.linkedin %}
         <li>
           <a href="https://www.linkedin.com/in/{{ author.linkedin }}" itemprop="sameAs">
-            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> author.linkedin
           </a>
         </li>
       {% endif %}
 
-      {% if author.bitbucket %}
+  <!-- Additional Info -->
+
+      {% if author.location %}
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">{{ author.location }}</span>
+        </li>
+      {% endif %}
+
+      {% if author.nationality %}
         <li>
-          <a href="https://bitbucket.org/{{ author.bitbucket }}" itemprop="sameAs">
-            <i class="fab fa-fw fa-bitbucket" aria-hidden="true"></i> Bitbucket
-          </a>
+          <i class="fas fa-fw fa-flag" aria-hidden="true"></i> <span itemprop="name">{{ author.nationality }}</span>
         </li>
       {% endif %}
 
-      {% if author.github %}
+      {% if author.born %}
         <li>
-          <a href="https://github.com/{{ author.github }}" itemprop="sameAs">
-            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
-          </a>
+          <i class="fas fa-fw fa-birthday-cake" aria-hidden="true"></i> <span itemprop="name">{{ author.born }}</span>
         </li>
       {% endif %}
 
-      {% if author.gitlab %}
+      {% if author.driving %}
         <li>
-          <a href="https://gitlab.com/{{ author.gitlab }}" itemprop="sameAs">
-            <i class="fab fa-fw fa-gitlab" aria-hidden="true"></i> GitLab
-          </a>
+          <i class="fas fa-fw fa-car" aria-hidden="true"></i> <span itemprop="name">{{ author.driving }}</span>
         </li>
       {% endif %}
 
-      {% if author.stackoverflow %}
-        <li>
-          <a href="https://www.stackoverflow.com/users/{{ author.stackoverflow }}" itemprop="sameAs">
-            <i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i> Stack Overflow
-          </a>
-        </li>
-      {% endif %}
-
-
+      <!-- driver telegram? area https://t.me/marcelofpfelix -->
 
     </ul>
   </div>
