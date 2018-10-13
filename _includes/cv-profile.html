@@ -39,19 +39,6 @@
     {% endif %}
   </div>
 
-  {% if author.email %}
-      <a href="mailto:{{ author.email }}">
-        <meta itemprop="email" content="{{ author.email }}" />
-        <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> {{ author.email }}
-      </a>
-  {% endif %}
-
-  {% if author.telegram %}
-      <a href="https://t.me/{{ author.telegram }}" itemprop="sameAs">
-        <i class="fab fa-fw fa-telegram" aria-hidden="true"></i>{{ author.telegram }}
-      </a>
-  {% endif %}
-
   <div class="author__urls-wrapper">
     <button class="btn btn--inverse">{{ site.data.ui-text[site.locale].follow_label | remove: ":" | default: "Follow" }}</button>
     <ul class="author__urls social-icons">
@@ -62,6 +49,23 @@
         <li>
           <a href="{{ author.uri }}" itemprop="url">
             <i class="fas fa-fw fa-link" aria-hidden="true"></i> {{ author.uri }}
+          </a>
+        </li>
+      {% endif %}
+
+      {% if author.email %}
+        <li>
+          <a href="mailto:{{ author.email }}">
+            <meta itemprop="email" content="{{ author.email }}" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> {{ author.email }}
+          </a>
+        </li>
+      {% endif %}
+
+      {% if author.telegram %}
+        <li>
+          <a href="https://t.me/{{ author.telegram }}" itemprop="sameAs">
+            <i class="fab fa-fw fa-telegram" aria-hidden="true"></i>{{ author.telegram }}
           </a>
         </li>
       {% endif %}
@@ -84,11 +88,13 @@
 
   <!-- Additional Info -->
 
+
+
     </ul>
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">{{ site.data.ui-text[site.locale].follow_label | remove: ":" | default: "Additional Info" }}</button>
+    <button class="btn btn--inverse">{{ "Additional Info" }}</button>
     <ul class="author__urls social-icons">
       {% if author.location %}
         <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
