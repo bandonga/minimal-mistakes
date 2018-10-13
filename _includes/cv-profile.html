@@ -95,7 +95,8 @@
 
   <div class="author__urls-wrapper">
     <button class="btn btn--inverse">{{ "Additional Info" }}</button>
-    <ul class="author__urls social-icons">
+    <ul class="author__urls additional-info">
+
       {% if author.location %}
         <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
           <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">{{ author.location }}</span>

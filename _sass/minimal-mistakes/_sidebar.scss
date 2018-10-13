@@ -58,11 +58,6 @@
     line-height: 1.5;
   }
 
-  li {
-      margin-bottom: 0.1em;
-  }
-
-
   img {
     width: 100%;
   }
@@ -177,7 +172,7 @@
   position: relative;
   cursor: pointer;
 
-  li:last-child {
+  li {
     a {
       margin-bottom: 0;
     }
@@ -260,6 +255,7 @@
 
   li {
     white-space: nowrap;
+    margin-bottom: 0.1em;
   }
 
   a {
