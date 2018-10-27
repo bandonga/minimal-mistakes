@@ -1,0 +1,14 @@
+{% assign author = page.author | default: page.authors[0] | default: site.author %}
+{% assign cv = site.data.cv[author] | default: author %}
+
+{% for sec_id in cv.sections %}
+    {% assign section = cv.data[sec_id] %}
+        <h3>{{section.title}}</h3>
+        {{ section.text | markdownify }}
+        {% for item in section.items %}
+            {% for keyvalue in item %} {%comment%} trick to get the arbitrarily-named key {%endcomment%}
+                {{keyvalue[0]}}
+                {{keyvalue[1] | markdownify}}
+            {% endfor %}
+        {% endfor %}
+{% endfor %}
