@@ -1,0 +1,27 @@
+Marcelo Felix:
+  name        : "Frankie"
+  avatar      : "/assets/images/michael-rose.jpg"
+  bio         : "my bio"
+  uri         : "https://maro.live/u/marcelo"
+  email       : "mail@maro.live"
+  telegram    : "telegram"
+  location    : "Lisboa, Portugal"
+  github      : "github"
+  linkedin    : "linkedin"
+  born        : "17th September 2018"
+  nationality : "Portuguese"
+  driving     : "Driving licence B"
+  sections:
+    - experience
+    - education
+    - skills
+    - free_time
+  data:
+    experience:
+      title: Experience
+      items:
+        - Service Operations:
+        - ententy    : marolive
+        - dates      : Apr 2018 - Present
+        - location   : Lisboa, Portugal
+        - description: "I eat all day, sleep all night."

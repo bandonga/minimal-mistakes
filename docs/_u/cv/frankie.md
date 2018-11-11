@@ -3,7 +3,7 @@ title: "Curriculum Vitae"
 user: frankie
 layout: cv
 author: "Frankie"
-permalink: "/u/frankie"
+permalink: "/u/frankie/cv"
 ---
 
 **NOTE:** :warning: Under Construction.
