@@ -1,7 +1,7 @@
 {% assign author = page.author | default: page.authors[0] | default: site.author %}
 {% assign cv = site.data.cv[author] | default: author %}
 
-cv.sections
+{{cv.sections}}
 
 {{cv.data}}
 
