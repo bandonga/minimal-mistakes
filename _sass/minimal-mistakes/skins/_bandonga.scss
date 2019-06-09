@@ -3,7 +3,7 @@
    ========================================================================== */
 
 /* Colors */
-$brand-color:         #9E9D24 !default;
+$brand-color:         #2E5090 !default;
 $brand-color-light:   lighten($brand-color, 25%) !default;
 $brand-color-dark:    darken($brand-color, 15%) !default;
 $brand-color-lighter: lighten($brand-color, 55%) !default;
@@ -38,7 +38,7 @@ $masthead-link-color:        $brand-color-lighter !default;
 $masthead-link-color-hover:  #fdfdfd !default;
 $navicon-link-color-hover:   mix(#000, $page-color, 30%) !default;
 
-/* contrast syntax highlighting (base16) 
+/* contrast syntax highlighting (base16)
 $base00: #000000 !default;
 $base01: #242422 !default;
 $base02: #484844 !default;
